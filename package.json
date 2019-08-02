@@ -1,0 +1,30 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "A second test project in purpose to learn deep about CSS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass dev/sass/main.scss dev/css/style_dev.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" dev/css/style_dev.css -o dev/css/style_dev.css",
+    "compress:css": "node-sass dev/css/style_dev.css assets/css/style.css --output-style compressed",
+    
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oddisey000/trillo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oddisey000/trillo/issues"
+  },
+  "homepage": "https://github.com/Oddisey000/trillo#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  }
+}
