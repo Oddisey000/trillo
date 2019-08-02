@@ -5,9 +5,14 @@
     &__sidebar {
         background-color: var(--color-grey-dark-1);
         flex: 0 0 18%; //No shrinking and not growing
+        //Push footer to the bottom and controll pannel up
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__hotel-view {
+        height: 80rem;
         background-color: var(--color-white-1);
         flex: 1; //Occupaying all remaining space
     }

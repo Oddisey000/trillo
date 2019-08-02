@@ -38,4 +38,11 @@ $color_grey-dark-3: #999;
 
     //Animation presset
     --std-transition: all .3s;
+    --transform-transition: 
+        transform .2s,
+        width .4s cubic-bezier(1, 0, 0, 1) .2s,
+        background-color .1s;
+
+    //Z-index settings
+    --z-index-value-1: 10;
 }
