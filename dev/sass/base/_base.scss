@@ -1,0 +1,32 @@
+//Reset all default browser's settings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//Inheriting box-sizing property to all web page's elements
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+//Setting global html settings
+html {
+    box-sizing: border-box;
+    //Makes 1rem = 10px (10px/16px = 62.5%)
+    font-size: 62.5%;
+}
+
+//Page's background setting
+body {
+    background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary-dark)
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--color-grey-dark-2);
+    min-height: 100vh;
+}

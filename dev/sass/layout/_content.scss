@@ -1,0 +1,14 @@
+//Styling the content
+.content {
+    display: flex;
+
+    &__sidebar {
+        background-color: var(--color-grey-dark-1);
+        flex: 0 0 18%; //No shrinking and not growing
+    }
+
+    &__hotel-view {
+        background-color: var(--color-white-1);
+        flex: 1; //Occupaying all remaining space
+    }
+}
