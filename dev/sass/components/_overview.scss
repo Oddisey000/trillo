@@ -1,0 +1,83 @@
+//Styling overview component
+.overview {
+    display: flex;
+    align-items: center; //Vertically alight elements to center
+    border-bottom: .1rem solid var(--color-grey-light-2);
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        /*Let element grow and occupie all available space
+        flex: 1;*/
+        margin-right: auto; //Only occupied space which wee need
+        display: flex;
+    }
+
+    &__icon--star,
+    &__icon--location {
+        height: var(--icons-small-size);
+        width: var(--icons-small-size);
+        fill: var(--color-primary);
+    }
+
+    &__icon--location {
+        margin-right: .5rem;
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        color: var(--color-white-1);
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__rating--count {
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+
+    &__rating--average {
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -.3rem;
+    }
+}
+
+.btn-location {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: .1rem solid currentColor;
+    padding-bottom: .2rem;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: var(--std-transition);
+
+    &:hover {
+        color: var(--color-grey-dark-1);
+    }
+
+    &:focus {
+        outline: none;
+        //animation: pulsate 1s infinite;
+        transform: translateY(.2rem);
+    }
+}

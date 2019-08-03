@@ -26,12 +26,14 @@ $color_grey-dark-3: #999;
   --color-white-1: #fff;
   --color-black-1: #000;
   --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-dark-2: 0 1rem 4rem rgba(0, 0, 0, .25);
   --std-transition: all .3s;
   --transform-transition: 
         transform .2s,
         width .4s cubic-bezier(1, 0, 0, 1) .2s,
         background-color .1s;
-  --z-index-value-1: 10; }
+  --z-index-value-1: 10;
+  --icons-small-size: 1.75rem; }
 
 * {
   margin: 0;
@@ -41,6 +43,10 @@ $color_grey-dark-3: #999;
 *::after,
 *::before {
   box-sizing: inherit; }
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-grey-light-1); }
 
 html {
   box-sizing: border-box;
@@ -115,8 +121,8 @@ body {
     fill: var(--color-grey-dark-2); }
   .user-nav__notification {
     font-size: .8rem;
-    height: 1.75rem;
-    width: 1.75rem;
+    height: var(--icons-small-size);
+    width: var(--icons-small-size);
     border-radius: 50%;
     background-color: var(--color-primary);
     color: var(--color-white-1);
@@ -152,6 +158,8 @@ body {
   .side-nav__item:hover::before {
     transform: scaleY(1);
     width: 100%; }
+  .side-nav__item--active {
+    background-color: var(--color-primary-light); }
   .side-nav__item:active::before {
     background-color: var(--color-primary-light); }
   .side-nav__link:link, .side-nav__link:visited {
@@ -165,10 +173,86 @@ body {
     display: flex;
     align-items: center; }
   .side-nav__icon {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: var(--icons-small-size);
+    height: var(--icons-small-size);
     margin-right: 2rem;
     fill: currentColor; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--color-grey-light-2); }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    /*Let element grow and occupie all available space
+        flex: 1;*/
+    margin-right: auto;
+    display: flex; }
+  .overview__icon--star, .overview__icon--location {
+    height: var(--icons-small-size);
+    width: var(--icons-small-size);
+    fill: var(--color-primary); }
+  .overview__icon--location {
+    margin-right: .5rem; }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+  .overview__rating {
+    background-color: var(--color-primary);
+    color: var(--color-white-1);
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .overview__rating--count {
+    font-size: .8rem;
+    text-transform: uppercase; }
+  .overview__rating--average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -.3rem; }
+
+.btn-location {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: .1rem solid currentColor;
+  padding-bottom: .2rem;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: var(--std-transition); }
+  .btn-location:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-location:focus {
+    outline: none;
+    transform: translateY(0.2rem); }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-dark-2); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
 
 .container {
   max-width: 120rem;
@@ -181,7 +265,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: var(--color-white-1);
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 0.1rem solid var(--color-grey-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -198,9 +282,9 @@ body {
     flex-direction: column;
     justify-content: space-between; }
   .content__hotel-view {
-    height: 80rem;
     background-color: var(--color-white-1);
-    flex: 1; }
+    flex: 1;
+    height: 80rem; }
 
 .footer {
   font-size: 1.2rem;

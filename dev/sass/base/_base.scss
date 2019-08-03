@@ -11,6 +11,11 @@
     box-sizing: inherit;
 }
 
+::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-grey-light-1);
+}
+
 //Setting global html settings
 html {
     box-sizing: border-box;

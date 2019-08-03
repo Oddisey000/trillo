@@ -28,8 +28,8 @@
 
     &__notification {
         font-size: .8rem;
-        height: 1.75rem;
-        width: 1.75rem;
+        height: var(--icons-small-size);
+        width: var(--icons-small-size);
         border-radius: 50%;
         background-color: var(--color-primary);
         color: var(--color-white-1);

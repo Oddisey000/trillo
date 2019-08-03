@@ -31,6 +31,10 @@
         width: 100%;
     }
 
+    &__item--active {
+        background-color: var(--color-primary-light);
+    }
+
     &__item:active::before {
         background-color: var(--color-primary-light);
     }
@@ -50,8 +54,8 @@
     }
 
     &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
+        width: var(--icons-small-size);
+        height: var(--icons-small-size);
         margin-right: 2rem;
         fill: currentColor;
     }

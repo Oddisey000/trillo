@@ -1,0 +1,9 @@
+//Styling gallery of hotels
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
