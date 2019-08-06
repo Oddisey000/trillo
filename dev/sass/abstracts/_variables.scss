@@ -36,6 +36,7 @@ $color_grey-dark-3: #999;
     //Shadows
     --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3);
     --shadow-dark-2: 0 1rem 4rem rgba(0, 0, 0, .25);
+    --shadow-dark-3: 0 2rem 5rem rgba(0, 0, 0, .06);
 
     //Animation presset
     --std-transition: all .3s;
@@ -46,6 +47,7 @@ $color_grey-dark-3: #999;
 
     //Z-index settings
     --z-index-value-1: 10;
+    --z-index-value-2: 1;
 
     //Small icons size and navigation icon size
     --icons-small-size: 1.75rem;
