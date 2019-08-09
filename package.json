@@ -6,8 +6,9 @@
   "scripts": {
     "compile:sass": "node-sass dev/sass/main.scss dev/css/style_dev.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" dev/css/style_dev.css -o dev/css/style_dev.css",
-    "compress:css": "node-sass dev/css/style_dev.css assets/css/style.css --output-style compressed",
-    
+    "compress:css": "node-sass dev/css/style_concat.css assets/css/style.css --output-style compressed",
+    "concat:css": "concat -o dev/css/style_concat.css dev/fonts/open_sans.css dev/css/style_dev.css",
+
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
