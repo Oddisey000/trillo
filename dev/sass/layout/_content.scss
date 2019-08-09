@@ -2,6 +2,10 @@
 .content {
     display: flex;
 
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+
     &__sidebar {
         background-color: var(--color-grey-dark-1);
         flex: 0 0 18%; //No shrinking and not growing

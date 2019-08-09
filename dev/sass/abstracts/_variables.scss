@@ -52,3 +52,10 @@ $color_grey-dark-3: #999;
     //Small icons size and navigation icon size
     --icons-small-size: 1.75rem;
 }
+
+//Break point variables
+$bp-largest: 75em; // 1200px (75*16px)
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
